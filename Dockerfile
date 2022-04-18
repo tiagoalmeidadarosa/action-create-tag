@@ -1,4 +1,4 @@
-FROM alpine:3.15
+FROM alpine:latest
 
 RUN apk --no-cache add git && \
     rm -rf /var/lib/apt/lists/*
