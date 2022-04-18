@@ -3,6 +3,8 @@ set -eu
 
 cd "${GITHUB_WORKSPACE}" || exit
 
+git config --global --add safe.directory $GITHUB_WORKSPACE
+
 if [ -z "${INPUT_TAG}" ]; then
   echo "[action-create-tag] No-tag was supplied! Please supply a tag."
   exit 1
